@@ -1,9 +1,9 @@
 {
   "name": "grunt-workspace",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "PoliteJS Workspace Tasks & Utilities",
   "main": "index.js",
-  "keywords": ['workspace','grunt','tasks'],
+  "keywords": ["workspace","grunt","tasks"],
   "author": {
     "name": "Marco Pegoraro",
     "url": "http://movableapp.com"
@@ -21,6 +21,7 @@
     "extend": "~1.2.1",
     "html-minifier": "~0.5.6",
     "shelljs": "~0.2.6",
-    "datauri": "~0.5.5"
+    "datauri": "~0.5.5",
+    "express": "~3.4.8"
   }
 }
