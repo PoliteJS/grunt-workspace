@@ -1,6 +1,6 @@
 {
   "name": "grunt-workspace",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "PoliteJS Workspace Tasks & Utilities",
   "main": "index.js",
   "keywords": ["workspace","grunt","tasks"],

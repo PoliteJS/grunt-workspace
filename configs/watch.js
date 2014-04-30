@@ -11,10 +11,9 @@ function configWatch(grunt) {
      */
     grunt.config.data.watch = extend(true, {
         'wks-ci' : {
-            files: ['build/debug/**/*'],
+            files: ['build/debug/**/*', 'src/**/*.spec.js'],
             tasks: [
-                'wks-karma-config',
-                'wks-karma-build',
+                'wks-karma',
                 'karma:wks-ci:run',
             ],
             options: {
