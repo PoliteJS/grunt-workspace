@@ -1,6 +1,6 @@
 
-
 var extend = require('extend');
+var childProcess = require('child_process');
 
 module.exports = function(grunt) {
     
@@ -28,6 +28,14 @@ module.exports = function(grunt) {
         paths.push('src/modules/**/specs/**/*.spec.js');
         grunt.config.data.karma['wks-test'].options.files = paths;
         grunt.config.data.karma['wks-ci'].options.files = paths;
+    });
+    
+    grunt.registerTask('wks-install-karma', 'install karmajs dependencies', function() {
+        var cl = childProcess.exec('npm install grunt-karma@0.8.x karma@0.12.x karma-chrome-launcher@0.1.x karma-jasmine@0.1.x karma-mocha@0.1.x karma-firefox-launcher@0.1.x karma-safari-launcher@0.1.x karma-phantomjs-launcher@0.1.x karma-chai@0.1.x karma-opera-launcher@0.1.x karma-coverage@0.2.x karma-sinon@1.0.x karma-osx-reporter@0.0.x karma-growl-reporter@0.1.x mocha@1.18.x chai@1.9.x sinon@1.9.x --save-dev', function() {});
+        cl.on('exit', this.async());
+        cl.stdout.on('data', function(data) {
+            process.stdout.write(data);
+        });
     });
     
 };
