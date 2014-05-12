@@ -18,7 +18,7 @@ exports.init = function(grunt) {
     
     this.config = {
         minifyTemplates: {
-            removeComments : true,
+            removeComments : false,
             collapseWhitespace : true,
             removeAttributeQuotes : true,
             removeEmptyAttributes : true
@@ -26,7 +26,7 @@ exports.init = function(grunt) {
         debug: {},
         release: {
             minifyHtml: {
-                removeComments : true,
+                removeComments : false,
                 collapseWhitespace : true,
                 removeAttributeQuotes : true,
                 removeEmptyAttributes : true
